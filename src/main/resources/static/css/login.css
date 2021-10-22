@@ -1,17 +1,22 @@
-.form-signin {
+.form-user {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.form-signin input[type="text"] {
+.form-user input[type="text"] {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     margin-bottom: -1px;
 }
 
-.form-signin input[type="password"] {
+.form-user input[type="email"] {
+    border-radius: 0;
+    margin-bottom: -1px;
+}
+
+.form-user input[type="password"] {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     margin-bottom: 10px;
@@ -25,4 +30,9 @@
 
 .form-floating:focus-within {
     z-index: 1000;
+}
+
+.form-redirect {
+    display: flex;
+    justify-content: center;
 }

@@ -7,12 +7,17 @@
     <link th:href="@{/css/login.css}" rel="stylesheet" type="text/css">
 </head>
 <body class="form-user">
-<form th:action method="post" style="width: 300px">
-    <h3 class="form-title">Please sign in</h3>
-    <p class="form-redirect">Don't have an account yet?&nbsp<a href="/register">Sign Up.</a></p>
+<form th:action method="post" style="width: 400px">
+    <h3 class="form-title">Sign Up</h3>
+    <p class="form-redirect">Already have an account? Then please&nbsp<a href="/login">Sign In.</a></p>
+
     <div class="form-floating">
         <input type="text" class="form-control" id="floatingId" placeholder="ID" name="username">
         <label for="floatingId">ID</label>
+    </div>
+    <div class="form-floating">
+        <input type="email" class="form-control" id="floatingEmail" placeholder="Email" name="email">
+        <label for="floatingEmail">Email</label>
     </div>
     <div class="form-floating">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
