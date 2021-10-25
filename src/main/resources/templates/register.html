@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -12,16 +12,22 @@
     <p class="form-redirect">Already have an account? Then please&nbsp<a href="/login">Sign In.</a></p>
 
     <div class="form-floating">
-        <input type="text" class="form-control" id="floatingId" placeholder="ID" name="username">
+        <input type="text" class="form-control" placeholder="ID" id="floatingId"
+               th:errorclass="is-invalid" th:field="${user.username}">
         <label for="floatingId">ID</label>
+        <div class="invalid-feedback" th:errors="${user.username}"></div>
     </div>
     <div class="form-floating">
-        <input type="email" class="form-control" id="floatingEmail" placeholder="Email" name="email">
+        <input type="email" class="form-control" id="floatingEmail" placeholder="Email"
+               th:errorclass="is-invalid" th:field="${user.email}">
         <label for="floatingEmail">Email</label>
+        <div class="invalid-feedback" th:errors="${user.email}"></div>
     </div>
     <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+               th:errorclass="is-invalid" th:field="${user.password}">
         <label for="floatingPassword">Password</label>
+        <div class="invalid-feedback" th:errors="${user.password}"></div>
     </div>
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
